@@ -25,18 +25,6 @@ from django.utils.safestring import mark_safe
 @login_required
 def home(request):
     user = request.user
-
-    # user_ip = request.META.get('REMOTE_ADDR')
-    # response = requests.get(f'https://api.findip.net/{user_ip}/?token={settings.IP_API_KEY}/')
-    # user_location = response.json()
-
-    # country_name = user_location.get('country', {}).get('en', 'Unknown country') 
-    # city_name = user_location.get('city', {}).get('names', {}).get('en', 'Unknown city') 
-    # user_device = request.META.get('HTTP_USER_AGENT', 'Unknown Device')
-    
-    # if 'Nigeria' in country_name:
-    #     return HttpResponse('<h1>You cannot access this website from Nigeria.</h1>')
-
     UserInfo = CustomUser.objects.get(pk=user.pk)
     UserDetails = UserProfile.objects.get(user=user)
     notifications = Notifications.objects.filter(user=user)
@@ -45,7 +33,7 @@ def home(request):
     payment_details = PaymentDetails.objects.filter(user=user)
     address = WalletAddress.objects.all()
 
-    coin_gecko_api_key = 'CG-ijyB17U95TbbzxurdFzBKi6H'
+    coin_gecko_api_key = 'your_coin_gecko_api_key'
 
     coin_gecko_endpoint = 'https://api.coingecko.com/api/v3/coins/markets'
     
