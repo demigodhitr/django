@@ -50,6 +50,40 @@ This is a Progressive Web App (PWA) for a Forex investment broker. It allows use
 
   
 ##
+## Email and API Configuration
+
+This application requires email functionality for certain features, such as user registration, password reset, and notifications. It also utilizes the Google reCAPTCHA service for form submissions and the IP stack API for geolocation features. Before running the application, you'll need to configure the email backend, Google reCAPTCHA key, and IP stack API key in the Django settings.
+
+### Email Configuration
+
+To configure the email backend:
+
+1. Open the `settings.py` file in your Django project.
+2. Locate the email settings section.
+3. Replace the placeholder values with your SMTP server settings or use a third-party email service provider.
+4. Save the changes and restart the Django server.
+
+For more information on configuring the email backend, refer to the [Django documentation](https://docs.djangoproject.com/en/stable/topics/email/).
+
+### Google reCAPTCHA Configuration
+
+To configure the Google reCAPTCHA key:
+
+1. Obtain a reCAPTCHA site key and secret key from the [reCAPTCHA admin console](https://www.google.com/recaptcha/admin).
+2. Open the relevant HTML template files where the reCAPTCHA widget is used (e.g., user registration, contact form).
+3. Replace the placeholder values with your reCAPTCHA site key.
+
+For more information on integrating reCAPTCHA with your Django application, refer to the [reCAPTCHA documentation](https://developers.google.com/recaptcha/intro).
+
+### IP stack API Configuration
+
+To configure the IP stack API key:
+
+1. Sign up for an account on [IP stack](https://ipstack.com/) to obtain an API key.
+2. Open the relevant Django settings file where the IP stack API key is used.
+3. Replace the placeholder value with your IP stack API key.
+
+For more information on using the IP stack API, refer to the [IP stack documentation](https://ipstack.com/documentation).
 
 
 
