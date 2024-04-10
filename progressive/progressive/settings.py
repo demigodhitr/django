@@ -4,6 +4,7 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# SPECIFY USER AUTHENTICATION MODEL
 AUTH_USER_MODEL = 'progressiveApp.CustomUser'
 
 LOGIN_URL = 'homepage/signin'
@@ -37,10 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
 ]
 
+# REQUIRED 
+# IMPORTANT
+IP_API_KEY = 'ip_stack_api_key'
 
-IP_API_KEY = 'd9d40dc5935445c1ba13a91cb69d3bac'
-
-GOOGLE_RECAPTCHA_SECRET_KEY = '6LcN17EpAAAAAFmAIwfyXH5D6_IahUjKaTECpCH5'
+# REQUIRED 
+# IMPORTANT
+GOOGLE_RECAPTCHA_SECRET_KEY = 'your_google_recaptcha_key'
 
 
 
@@ -80,12 +84,8 @@ WSGI_APPLICATION = 'progressive.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'NewProgressive',
-        'USER': 'demigod',
-        'PASSWORD': '160220',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -141,11 +141,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # EMAILBACKEND 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mail.myprofitpurse.com'
+EMAIL_HOST = 'mail.yourhost.com'
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 EMAIL_USE_TLS = False
-EMAIL_HOST_USER = 'alerts@myprofitpurse.com'
-EMAIL_HOST_PASSWORD = '@xrA;uY42KY62o'
-DEFAULT_FROM_EMAIL = 'alerts@myprofitpurse.com'
-SERVER_EMAIL = 'alerts@myprofitpurse.com'
+EMAIL_HOST_USER = 'email_address@domain.com'
+EMAIL_HOST_PASSWORD = 'some_password'
+DEFAULT_FROM_EMAIL = 'email_address@domain.com'
+SERVER_EMAIL = 'email_address@domain.com'
