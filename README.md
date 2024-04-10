@@ -49,10 +49,9 @@ This is a Progressive Web App (PWA) for a Forex investment broker. It allows use
     - you typically enter the address in your browser url search bar.
 
   
-##
 ## Email and API Configuration
 
-This application requires email functionality for certain features, such as user registration, password reset, and notifications. It also utilizes the Google reCAPTCHA service for form submissions and the IP stack API for geolocation features. Before running the application, you'll need to configure the email backend, Google reCAPTCHA key, and IP stack API key in the Django settings.
+This application requires email functionality for certain features, such as user registration, password reset, and notifications. It also utilizes the Google reCAPTCHA service for form submissions, the IP stack API for geolocation features, and the CoinGecko API for fetching cryptocurrency data. Before running the application, you'll need to configure the email backend, Google reCAPTCHA key, IP stack API key, and CoinGecko API key in the Django settings.
 
 ### Email Configuration
 
@@ -84,6 +83,20 @@ To configure the IP stack API key:
 3. Replace the placeholder value with your IP stack API key.
 
 For more information on using the IP stack API, refer to the [IP stack documentation](https://ipstack.com/documentation).
+
+### CoinGecko API Configuration
+
+To configure the CoinGecko API key:
+
+1. Sign up for an account on [CoinGecko](https://www.coingecko.com/) to obtain an API key.
+2. Open the relevant Django settings file where the CoinGecko API key is used.
+3. Replace the placeholder value with your CoinGecko API key.
+
+For more information on using the CoinGecko API, refer to the [CoinGecko API documentation](https://www.coingecko.com/api/documentation).
+
+### Google Analytics Tags
+
+If you wish to track website traffic using Google Analytics, replace the Google Analytics tags (`<script>` tags with your tracking ID) on each template, placed immediately after `<head>` opening tag  with your own Google Analytics tags. You can obtain your tracking ID from the Google Analytics admin console.
 
 
 
