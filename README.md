@@ -18,6 +18,9 @@ This is a Progressive Web App (PWA) for a Forex investment broker. It allows use
 - Backend:
   - Django
   - Django REST Framework
+ 
+ ## You may have to recreate 'media' directory in the base directory(progressive) if it doesn't exist after pull or cloning.
+  - create a folder named 'media' inside the 'root directory' if it doesn't exist already.
 
 ## Installation
 1. **Clone the Repository:**
@@ -26,27 +29,34 @@ This is a Progressive Web App (PWA) for a Forex investment broker. It allows use
    cd progressive
 
 
-## Install Dependencies
-1. pip install -r requirements.txt
+2. **Install Dependencies:**
+   ```bash
+    pip install -r requirements.txt
 
-## Run migrations
-- python manage.py migrate
-1.  if failed, check db config in #settings.py, then
--   python manage.py makemigrations
--   python manage.py migrate
+3. **Run migrations:**
+   ```bash
+   python manage.py migrate
+   
+i.  if failed, check db `config` in `#settings.py,` then
+    ```bash
+-     python manage.py makemigrations
+-     python manage.py migrate
 
-## Start the development server
-- python manage.py runserver
-- access the application through the url on your command prompt / terminal.
-  ## OR
-  - python manage.py runserver 0.0.0.0:port (example python manage.py runserver 0.0.0.0:8080) to bind development to public network
+4. **Start the development server:**
+   ```bash
+    - python manage.py runserver
+    - access the application through the url on your command prompt / terminal.
+  # OR
+  1.
+    ```bash
+     python manage.py runserver 0.0.0.0:port (example python manage.py runserver 0.0.0.0:8080) to bind development to public network
     and make it discoverable by other device/machines on the same network.
-  - for example, you can connect your smartphone device and computer to the same network and and access the deveopment server using your
+     for example, you can connect your smartphone device and computer to the same network and and access the deveopment server using your
     smartphone through the address =  ip_address:port
     # replace ip_address with your computer ip address. run the command ipconfig in a command prompt to confirm your computer's IP.
     # replace port with the actual port number used. 8080 in this case or any port used when starting the server.
-    - example 192.168.0.231:8080
-    - you typically enter the address in your browser url search bar.
+       example 192.168.0.231:8080
+       you typically enter the address in your browser url search bar.
 
   
 ## Email and API Configuration
